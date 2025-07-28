@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Demo Page with Link</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background: #f6f8fa;
+        }
+        h1 {
+            color: #4F8A8B;
+        }
+        a.demo-link {
+            display: inline-block;
+            text-decoration: none;
+            background: #4F8A8B;
+            color: white;
+            padding: 10px 24px;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: background 0.2s;
+        }
+        a.demo-link:hover {
+            background: #2d5c5a;
+        }
+    </style>
+    <script type="javascript">
+        (function(w,d,t,u,n,a,m){w['MauticTrackingObject']=n;
+            w[n]=w[n]||function(){(w[n].q=w[n].q||[]).push(arguments)},a=d.createElement(t),
+                m=d.getElementsByTagName(t)[0];a.async=1;a.src=u;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://rd-qa01.qa.acs.acquia.io/mtc.js','mt');
+
+        mt('send', 'pageview');
+    </script>
+</head>
+<body>
+    <h1>HTML Demo Page</h1>
+    <p>This is a simple demo page with a link.</p>
+    <a class="demo-link" href="https://www.example.com" target="_blank">Visit Example.com</a>
+</body>
+</html>
