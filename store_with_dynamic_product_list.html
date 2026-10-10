@@ -49,7 +49,7 @@
 </head>
 <body class="bg-slate-50 font-sans text-slate-800 antialiased min-h-screen flex flex-col">
 
-    <!-- Top Merchant Info Bar -->
+    <!-- Top Merchant Info Bar -- >
     <div class="bg-whatsapp-dark text-white text-xs sm:text-sm py-2 px-4 shadow-inner flex justify-between items-center">
         <div class="flex items-center space-x-2">
             <i class="fa-brands font-semibold fa-whatsapp text-whatsapp-light text-base"></i>
@@ -63,7 +63,7 @@
                 <i class="fa-solid fa-gear"></i> Store Settings
             </button>
         </div>
-    </div>
+    </div> -->
 
     <!-- Main Navigation Header -->
     <header class="sticky top-0 z-30 glass-header border-b border-slate-200 shadow-sm">
@@ -110,7 +110,7 @@
 
     <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <!-- Hero Section -->
-        <div class="bg-gradient-to-r from-whatsapp-dark via-whatsapp to-emerald-600 rounded-2xl text-white p-6 sm:p-8 mb-8 shadow-lg relative overflow-hidden">
+        <!-- <div class="bg-gradient-to-r from-whatsapp-dark via-whatsapp to-emerald-600 rounded-2xl text-white p-6 sm:p-8 mb-8 shadow-lg relative overflow-hidden">
             <div class="relative z-10 max-w-xl">
                 <span class="inline-block bg-white/20 backdrop-blur-md px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider mb-3">Loaded dynamically from JSON catalog</span>
                 <h2 class="text-2xl sm:text-4xl font-extrabold tracking-tight mb-2">Order Products Easily in 1-Click</h2>
@@ -120,7 +120,7 @@
                 </a>
             </div>
             <i class="fa-brands fa-whatsapp absolute -bottom-10 -right-10 text-white/10 text-[200px] pointer-events-none"></i>
-        </div>
+        </div> -->
 
         <!-- Category Filter Pills -->
         <div id="products-section" class="mb-6">
@@ -259,17 +259,6 @@
 
                         <div>
                             <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">
-                                Delivery Option
-                            </label>
-                            <select id="deliveryOption" onchange="calculateCartTotals()" class="w-full px-3.5 py-2.5 border border-slate-300 rounded-lg text-sm focus:ring-2 focus:ring-whatsapp focus:outline-none bg-white">
-                                <option value="standard" data-fee="5">Standard Delivery ($5.00) - 2-3 Days</option>
-                                <option value="express" data-fee="12">Express Delivery ($12.00) - Same / Next Day</option>
-                                <option value="pickup" data-fee="0">Self Store Pickup (Free)</option>
-                            </select>
-                        </div>
-
-                        <div>
-                            <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">
                                 Order Notes / Specific Requests
                             </label>
                             <input type="text" id="custNotes" placeholder="e.g. Ring doorbell, gift wrap..."
@@ -317,7 +306,7 @@
         </div>
     </div>
 
-    <!-- JSON Editor Modal (Allows users to view/edit products.json data live) -->
+    <!-- JSON Editor Modal (Allows users to view/edit products.json data live) -- >
     <div id="jsonEditorModal" class="fixed inset-0 z-50 hidden bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4">
         <div class="bg-white rounded-2xl max-w-2xl w-full p-6 shadow-2xl relative flex flex-col max-h-[90vh]">
             <button onclick="closeJsonEditorModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600">
@@ -345,9 +334,9 @@
                 </button>
             </div>
         </div>
-    </div>
+    </div> -->
 
-    <!-- Merchant WhatsApp Settings Modal -->
+    <!-- Merchant WhatsApp Settings Modal -- >
     <div id="settingsModal" class="fixed inset-0 z-50 hidden bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4">
         <div class="bg-white rounded-2xl max-w-md w-full p-6 shadow-2xl relative">
             <button onclick="closeStoreSettings()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600">
@@ -378,7 +367,7 @@
                 </button>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!-- Toast Notification Banner -->
     <div id="toast" class="fixed bottom-20 left-1/2 -translate-x-1/2 z-50 hidden bg-slate-900 text-white px-5 py-3 rounded-xl shadow-2xl flex items-center space-x-3 transition-all duration-300 transform scale-90 opacity-0">
@@ -389,7 +378,7 @@
     <script>
         // Global Store State & Configuration
         let storeConfig = {
-            merchantPhone: localStorage.getItem('merchant_wa_phone') || '15551234567'
+            merchantPhone: '918087191696'
         };
 
         let currentCategory = 'All';
@@ -421,62 +410,62 @@
             },
             {
                 "id": "p3",
-                "name": "Minimalist Leather Backpack",
-                "price": 74.99,
-                "category": "Fashion",
-                "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=600&q=80",
-                "description": "Handcrafted from genuine full-grain leather. Features a dedicated 15-inch laptop compartment and water-resistant lining.",
-                "specs": ["Genuine Leather", "Fits 15\" Laptop", "Water Resistant", "Multiple Organizer Pockets"],
+                "name": "Flower Rangoli Set",
+                "price": 630,
+                "category": "Full Set",
+                "image": "./images/set-A2.jpeg",
+                "description": "Beautifull flowers rangoli - Set",
+                "specs": ["6 x flowers", "1 x circuler design"],
                 "inStock": true
             },
             {
                 "id": "p4",
-                "name": "Ergonomic Desk Ceramic Mug",
-                "price": 19.99,
-                "category": "Home & Living",
-                "image": "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=600&q=80",
-                "description": "Handmade double-walled ceramic coffee mug designed to keep your beverage hot while remaining cool to the touch.",
-                "specs": ["350ml Capacity", "Microwave Safe", "Dishwasher Safe", "Heat Retention Design"],
+                "name": "Rangoli Set A3",
+                "price": 500,
+                "category": "Full Set",
+                "image": "./images/set-A3.jpeg",
+                "description": "Handmade ready rangoli set.",
+                "specs": ["4 x flowers", "1 x geomatric design"],
                 "inStock": true
             },
             {
                 "id": "p5",
-                "name": "Mechanical Gaming Keyboard",
-                "price": 109.00,
-                "category": "Electronics",
-                "image": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=600&q=80",
-                "description": "Customizable RGB backlighting with tactile mechanical switches for hyper-responsive typing and high-speed gaming.",
-                "specs": ["RGB Backlit", "Tactile Switches", "Detachable Cable", "Anti-Ghosting Keys"],
+                "name": "Flower with green leaf",
+                "price": 100,
+                "category": "Flowers",
+                "image": "./images/flower-A1.jpeg",
+                "description": "Pink flower with green leaf.",
+                "specs": ["7 inc Flower"],
                 "inStock": true
             },
             {
                 "id": "p6",
-                "name": "Classic Aviator Polarized Sunglasses",
-                "price": 39.99,
-                "category": "Fashion",
-                "image": "https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=600&q=80",
-                "description": "Timeless aviator style featuring polarized UV400 lenses to eliminate glare and protect your eyes in bright sunlight.",
-                "specs": ["UV400 Protection", "Polarized Lenses", "Lightweight Metal Frame", "Carrying Case Included"],
+                "name": "Rose Flower",
+                "price": 70,
+                "category": "Flowers",
+                "image": "./images/flower-A2.jpeg",
+                "description": "Red rose flower.",
+                "specs": ["6 inch rose flower"],
                 "inStock": true
             },
             {
                 "id": "p7",
-                "name": "Aromatic Soy Candle Gift Set",
-                "price": 29.99,
-                "category": "Home & Living",
-                "image": "https://images.unsplash.com/photo-1603006905003-be475563bc59?auto=format&fit=crop&w=600&q=80",
-                "description": "Set of 3 natural soy wax candles infused with lavender, vanilla, and eucalyptus essential oils.",
-                "specs": ["100% Soy Wax", "45hr Burn Time Each", "Natural Essential Oils", "Eco-friendly Cotton Wick"],
+                "name": "Pooja Kalash (A)",
+                "price": 150,
+                "category": "Kalash",
+                "image": "./images/kalash-a.jpeg",
+                "description": "Single Kalash with lotus flower.",
+                "specs": ["1 x kalash", "7 inch height"],
                 "inStock": true
             },
             {
                 "id": "p8",
-                "name": "Insulated Stainless Steel Water Bottle",
-                "price": 24.50,
-                "category": "Deals",
-                "image": "https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&w=600&q=80",
-                "description": "Vacuum insulated stainless steel bottle keeps liquids ice-cold for up to 24 hours or hot for 12 hours.",
-                "specs": ["750ml Volume", "BPA Free", "24hr Cold / 12hr Hot", "Leakproof Cap"],
+                "name": "Peacock Rangoli",
+                "price": 250,
+                "category": "Peacock",
+                "image": "./images/peacock-1.jpeg",
+                "description": "Attractive peacock ready rangoli.",
+                "specs": ["A4 page size peacock", "Reusable"],
                 "inStock": true
             }
         ];
@@ -628,7 +617,7 @@
                         <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
                             <div>
                                 <span class="text-xs text-slate-400 block font-medium">Price</span>
-                                <span class="text-lg font-extrabold text-slate-900">$${Number(product.price).toFixed(2)}</span>
+                                <span class="text-lg font-extrabold text-slate-900">Rs ${Number(product.price).toFixed(2)}</span>
                             </div>
 
                             <div class="flex items-center space-x-1.5">
